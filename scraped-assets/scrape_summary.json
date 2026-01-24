@@ -1,0 +1,233 @@
+{
+  "business": {
+    "name": "Jam Belfast",
+    "legal_name": "Spires Corporate Catering Limited trading as JAM",
+    "type": "Cafe, Restaurant & Corporate Catering",
+    "url": "https://jambelfast.com",
+    "phone": "028 9032 8103",
+    "email": "info@jambelfast.com",
+    "address": {
+      "line1": "Unit 23, Park Centre",
+      "line2": "Donegall Road",
+      "city": "Belfast",
+      "postcode": "BT12 6HN"
+    },
+    "hours": {
+      "monday_saturday": "9am - 5pm",
+      "sunday": "1pm - 5pm"
+    },
+    "certifications": ["Fairtrade", "Food Hygiene Rating 5", "Gluten Free Available"]
+  },
+  "scraped_date": "2026-01-23",
+  "stats": {
+    "pages": 3,
+    "pdfs": 2,
+    "gallery_images": 17,
+    "menu_images": 3,
+    "css_files": 3,
+    "total_size_mb": 15
+  },
+  "colors": {
+    "primary": {
+      "teal": "#0099cb",
+      "cyan": "#2AC4EA",
+      "navy": "#111112",
+      "accent_blue": "#3452ff"
+    },
+    "logo": {
+      "j": "blue",
+      "a": "pink/coral",
+      "m": "green"
+    },
+    "neutrals": {
+      "black": "#000000",
+      "white": "#FFFFFF",
+      "dark_gray": "#282828",
+      "medium_gray": "#4B4F52",
+      "light_gray": "#888888",
+      "background": "#f1f1f1",
+      "off_white": "#ECEBE9"
+    }
+  },
+  "fonts": {
+    "headings": "Playfair Display",
+    "body": "Roboto",
+    "condensed": "Roboto Condensed",
+    "display": "Sigmar One"
+  },
+  "navigation": ["HOME", "OUR MENUS", "GALLERY", "CONTACT"],
+  "menus": {
+    "corporate": {
+      "breakfast": [
+        {"name": "Scone platter", "price": 2.10, "description": "Freshly baked scones with butter and jam"},
+        {"name": "Buttie platter", "price": 4.45, "description": "Quality bacon or sausage in a delicious floury bap"},
+        {"name": "Danish platter", "price": 2.75, "description": "Freshly baked selection of Danish pastries"},
+        {"name": "Fruit platter", "price": 3.85, "description": "Medley of freshly cut fruit pieces served with natural yoghurt"}
+      ],
+      "lunch": [
+        {"name": "Gourmet sandwich platter", "price": 4.75},
+        {"name": "Gourmet wrap platter", "price": 4.95},
+        {"name": "Soup and sandwich platter", "price": 7.25}
+      ],
+      "finger_buffet": {
+        "price": 7.50,
+        "note": "Choose 4 items",
+        "items": [
+          "Homemade southern fried chicken goujons",
+          "Freshly baked mini sausage rolls",
+          "Cocktail sausages with sweet chilli glaze and sesame seeds",
+          "Cheddar, sun-blushed tomato and spring onion Quiche (v)",
+          "Mini gourmet wraps selection",
+          "Gourmet sandwich selection",
+          "Mini wheaten bites selection",
+          "Chicken satay skewers"
+        ]
+      },
+      "fork_buffet": {
+        "price": 12.95,
+        "note": "Choose 2 dishes",
+        "items": [
+          "Creamy beef stroganoff with saffron rice",
+          "Beef lasagne served with mixed leaf salad",
+          "Chicken fricassee with saffron rice",
+          "Chilli con carne with saffron rice and sour cream",
+          "Chinese style chicken curry with saffron rice",
+          "Peppered beef stroganoff with saffron rice",
+          "Hearty Irish lamb stew served with wheaten bread",
+          "Chicken and leek pie served with buttery mash",
+          "Classic tomato penne pasta (v)",
+          "Winter vegetable curry (v)",
+          "Vegetable chilli with soured cream, guacamole and rice"
+        ]
+      },
+      "desserts_package": {
+        "price": 6.25,
+        "note": "Choose 2 items with tea and coffee",
+        "items": [
+          "Bramley apple crumble and custard",
+          "Fresh fruit salad and fresh cream",
+          "Fresh fruit pavlova",
+          "Deep dish banoffee pie",
+          "Baileys and white chocolate cheesecake"
+        ]
+      },
+      "beverages": [
+        {"name": "Tea or coffee", "price": 10.00, "note": "Serves 5-6 people"},
+        {"name": "Tray bakes", "price": 2.30, "note": "from, per person"},
+        {"name": "Soft drinks", "price": 2.40, "note": "from, per person"}
+      ]
+    },
+    "drinks": {
+      "soft_drinks": [
+        {"name": "Coca Cola, Diet Coke, Coke Zero, Fanta Orange, Fanta Lemon, 7-Up", "price_regular": 3, "price_large": 4},
+        {"name": "Still / Sparkling Water", "price": 3},
+        {"name": "Pure Orange / Apple", "price": 3.30},
+        {"name": "Appletiser", "price": 3.30},
+        {"name": "Milkshake", "price": 4.50, "flavours": ["Biscoff", "Nutella", "Strawberry", "Raspberry", "Banana"]}
+      ],
+      "coffee_tea": [
+        {"name": "Tea", "price": 2.25},
+        {"name": "Herbal Tea", "price": 3.75},
+        {"name": "Americano", "price": 3.45},
+        {"name": "Latte / Cappuccino", "price": 3.90},
+        {"name": "Flat White", "price": 3.95},
+        {"name": "Iced Latte", "price": 4.40},
+        {"name": "Hot Chocolate", "price": 4.50},
+        {"name": "Espresso", "price": 2.95}
+      ],
+      "bottled_beers": [
+        {"name": "Peroni", "size": "330ml", "price": 4.60},
+        {"name": "Corona", "size": "330ml", "price": 4.60},
+        {"name": "Coors", "size": "330ml", "price": 4.60}
+      ],
+      "cider": [
+        {"name": "Magners", "size": "500ml", "price": 5.75}
+      ],
+      "draught": [
+        {"name": "Guinness Draught Pint", "price": 4.80}
+      ],
+      "alcopops": [
+        {"name": "Smirnoff Ice", "size": "330ml", "price": 4.95},
+        {"name": "WKD", "size": "330ml", "price": 4.95}
+      ],
+      "white_wines": [
+        {"name": "Sauvignon Blanc", "bottle": 19.50, "glass": 6.75},
+        {"name": "Chardonnay", "bottle": 19.50, "glass": 6.75},
+        {"name": "Pinot Grigio", "bottle": 19.50, "glass": 6.75}
+      ],
+      "red_wines": [
+        {"name": "Merlot", "bottle": 19.50, "glass": 6.75}
+      ],
+      "rose_prosecco": [
+        {"name": "Rose / Prosecco", "bottle": 19.50, "glass": 6.75}
+      ],
+      "spirits": {
+        "price": 4.70,
+        "options": ["Gordon's London Dry", "Smirnoff Vodka", "Irish Whisky", "Baileys Original"]
+      },
+      "liqueur_coffee": {
+        "price": 6.55,
+        "options": ["Irish Coffee", "Bailey's Coffee"]
+      }
+    },
+    "desserts": [
+      {"name": "Sticky Toffee Pudding", "price": 6.50, "description": "Served with fresh cream or whipped ice cream"},
+      {"name": "Chocolate Fudge Brownie", "price": 6.50, "description": "Hot & gooey, served with fresh cream or whipped ice cream"},
+      {"name": "Waffles", "price": 6.25, "description": "Choose from nutella and banana, strawberries and cream, biscoff or oreo. Add ice cream"},
+      {"name": "Ice Cream Sundae", "price": 5.95, "description": "Whipped ice cream with flavour of choice: Hot brownie, kinder bueno, biscoff, nutella and banana"},
+      {"name": "Ice Cream Milkshakes", "price": 4.25, "flavours": ["strawberry", "banana", "kinder bueno", "chocolate", "biscoff"]},
+      {"name": "Cake of the Day", "price": 6.50, "description": "Ask the server - Served with whipped ice cream or fresh cream"},
+      {"name": "Whipped Ice Cream", "price": 2.95, "description": "Served in a poke"},
+      {"name": "Selection of Traybakes", "price": 3.20, "note": "from"}
+    ]
+  },
+  "assets": {
+    "logo": "images/logo.jpg",
+    "gallery": [
+      "gallery/01-243679795.jpg",
+      "gallery/02-273027674.jpg",
+      "gallery/03-273366920.jpg",
+      "gallery/04-273220010.jpg",
+      "gallery/05-273764476.jpg",
+      "gallery/06-274985766.jpg",
+      "gallery/07-278877838.jpg",
+      "gallery/08-279222123.jpg",
+      "gallery/09-279969824.jpg",
+      "gallery/10-281413911.jpg",
+      "gallery/11-281490340.jpg",
+      "gallery/12-281329978.jpg",
+      "gallery/13-281463290.jpg",
+      "gallery/14-283714051.jpg",
+      "gallery/15-283553853.jpg",
+      "gallery/16-283667449.jpg",
+      "gallery/17-281915507.jpg"
+    ],
+    "menu_images": [
+      "menus/corporate-menu-screenshot.png",
+      "menus/restaurant-menu-1.jpg",
+      "menus/restaurant-menu-2.jpg"
+    ],
+    "pdfs": [
+      "pdfs/corporate-menu-leaflet.pdf",
+      "pdfs/jam-drinks-desserts.pdf"
+    ],
+    "css": [
+      "css/style.css",
+      "css/salient-dynamic-styles.css",
+      "css/responsive.css"
+    ],
+    "pages": [
+      "pages/index.html",
+      "pages/corporate-menu.html",
+      "pages/restaurant-menu.html"
+    ]
+  },
+  "tech_recommendations": {
+    "framework": "Next.js 16",
+    "styling": "Tailwind CSS 4",
+    "animations": "Framer Motion 12",
+    "smooth_scroll": "Lenis",
+    "icons": "Lucide React",
+    "fonts": ["Playfair Display", "Roboto", "Sigmar One"]
+  }
+}
