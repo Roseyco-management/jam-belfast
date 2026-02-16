@@ -5,42 +5,52 @@ import Image from "next/image";
 import { useState } from "react";
 import { X, ZoomIn } from "lucide-react";
 
-type Category = "all" | "breakfast" | "lunch" | "desserts" | "drinks" | "cafe";
+type Category = "all" | "brekkie" | "hot-food" | "desserts" | "drinks" | "catering";
 
 interface GalleryImage {
   src: string;
+  name: string;
   span: string;
   accent: string;
   category: Category[];
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: "/gallery/01-243679795.jpg", span: "col-span-2 row-span-2", accent: "#0099cb", category: ["cafe"] },
-  { src: "/gallery/02-273027674.jpg", span: "col-span-1 row-span-1", accent: "#ff8097", category: ["breakfast"] },
-  { src: "/gallery/03-273366920.jpg", span: "col-span-1 row-span-1", accent: "#f4b800", category: ["lunch"] },
-  { src: "/gallery/04-273220010.jpg", span: "col-span-1 row-span-2", accent: "#8BC34A", category: ["desserts"] },
-  { src: "/gallery/05-273764476.jpg", span: "col-span-1 row-span-1", accent: "#0099cb", category: ["breakfast"] },
-  { src: "/gallery/06-274985766.jpg", span: "col-span-1 row-span-1", accent: "#ff8097", category: ["lunch"] },
-  { src: "/gallery/07-278877838.jpg", span: "col-span-2 row-span-1", accent: "#f4b800", category: ["drinks"] },
-  { src: "/gallery/08-279222123.jpg", span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["desserts"] },
-  { src: "/gallery/09-279969824.jpg", span: "col-span-1 row-span-2", accent: "#0099cb", category: ["breakfast"] },
-  { src: "/gallery/10-281413911.jpg", span: "col-span-1 row-span-1", accent: "#ff8097", category: ["lunch"] },
-  { src: "/gallery/11-281490340.jpg", span: "col-span-2 row-span-1", accent: "#f4b800", category: ["cafe"] },
-  { src: "/gallery/12-281329978.jpg", span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["desserts"] },
-  { src: "/gallery/13-281463290.jpg", span: "col-span-1 row-span-1", accent: "#0099cb", category: ["drinks"] },
-  { src: "/gallery/14-283714051.jpg", span: "col-span-1 row-span-1", accent: "#ff8097", category: ["breakfast"] },
-  { src: "/gallery/15-283553853.jpg", span: "col-span-2 row-span-2", accent: "#f4b800", category: ["lunch"] },
-  { src: "/gallery/16-283667449.jpg", span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["desserts"] },
-  { src: "/gallery/17-281915507.jpg", span: "col-span-1 row-span-1", accent: "#0099cb", category: ["drinks"] },
+  // ── Brekkie (corporate-menu.pdf) ──
+  { src: "/gallery/toasted-pancakes-with-bacon.jpg", name: "Toasted Pancakes & Bacon", span: "col-span-1 row-span-2", accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/smashed-avocado.jpg",             name: "Smashed Avocado",          span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/ulster-fry.jpg",                  name: "Ulster Fry",               span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/scone-platter-and-latte.jpg",     name: "Scone Platter & Latte",    span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
+
+  // ── Hot Food (corporate-menu.pdf) ──
+  { src: "/gallery/grilled-beef-burger.jpg",         name: "Grilled Beef Burger",       span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/chicken-curry.jpg",               name: "Chicken Curry",             span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/fresh-cod.jpg",                   name: "Fresh Cod & Chips",         span: "col-span-2 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/lasagne.jpg",                     name: "Lasagne",                   span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food", "catering"] },
+  { src: "/gallery/southern-fried-goujons.jpg",      name: "Southern Fried Goujons",    span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food", "catering"] },
+  { src: "/gallery/roast-beef.jpg",                  name: "Roast Beef Dinner",         span: "col-span-2 row-span-2", accent: "#8BC34A", category: ["hot-food"] },
+
+  // ── Desserts (restaurant-menu-1.pdf) ──
+  { src: "/gallery/cake-of-the-day.jpg",             name: "Cake of the Day",           span: "col-span-1 row-span-1", accent: "#ff8097", category: ["desserts"] },
+  { src: "/gallery/waffles-strawberries-and-cream.jpg", name: "Waffles & Strawberries", span: "col-span-2 row-span-1", accent: "#ff8097", category: ["desserts"] },
+
+  // ── Drinks (restaurant-menu-1.pdf) ──
+  { src: "/gallery/biscoff-milkshake-and-latte.jpg", name: "Biscoff Milkshake & Latte", span: "col-span-2 row-span-2", accent: "#f4b800", category: ["drinks"] },
+  { src: "/gallery/iced-latte-and-milkshake.jpg",    name: "Iced Latte & Milkshake",    span: "col-span-1 row-span-2", accent: "#f4b800", category: ["drinks"] },
+  { src: "/gallery/hot-chocolate.jpg",               name: "Hot Chocolate",             span: "col-span-1 row-span-1", accent: "#f4b800", category: ["drinks"] },
+
+  // ── Catering (jam-tent.pdf) ──
+  { src: "/gallery/gourmet-sandwich-platter.jpg",    name: "Gourmet Sandwich Platter",  span: "col-span-1 row-span-1", accent: "#E91E63", category: ["catering"] },
+  { src: "/gallery/chicken-and-leek-pie.jpg",        name: "Chicken & Leek Pie",        span: "col-span-1 row-span-1", accent: "#E91E63", category: ["catering"] },
 ];
 
 const categories: { id: Category; label: string; color: string }[] = [
-  { id: "all", label: "All", color: "#111112" },
-  { id: "breakfast", label: "Breakfast", color: "#0099cb" },
-  { id: "lunch", label: "Lunch", color: "#8BC34A" },
+  { id: "all",      label: "All",      color: "#111112" },
+  { id: "brekkie",  label: "Brekkie",  color: "#0099cb" },
+  { id: "hot-food", label: "Hot Food", color: "#8BC34A" },
   { id: "desserts", label: "Desserts", color: "#ff8097" },
-  { id: "drinks", label: "Drinks", color: "#f4b800" },
-  { id: "cafe", label: "Cafe", color: "#0099cb" },
+  { id: "drinks",   label: "Drinks",   color: "#f4b800" },
+  { id: "catering", label: "Catering", color: "#E91E63" },
 ];
 
 export default function Gallery() {
@@ -137,7 +147,7 @@ export default function Gallery() {
               >
                 <Image
                   src={image.src}
-                  alt={`Gallery image ${index + 1}`}
+                  alt={image.name}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-all duration-700 group-hover:scale-110"
@@ -168,12 +178,12 @@ export default function Gallery() {
                   </motion.div>
                 </div>
 
-                {/* Category badge */}
+                {/* Name badge */}
                 <div
                   className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ backgroundColor: image.accent }}
                 >
-                  {image.category[0].charAt(0).toUpperCase() + image.category[0].slice(1)}
+                  {image.name}
                 </div>
 
                 {/* Corner accent */}
