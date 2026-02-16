@@ -10,38 +10,39 @@ type Category = "all" | "brekkie" | "hot-food" | "desserts" | "drinks" | "cateri
 interface GalleryImage {
   src: string;
   name: string;
-  span: string;
+  width: number;
+  height: number;
   accent: string;
   category: Category[];
 }
 
 const galleryImages: GalleryImage[] = [
   // ── Brekkie (corporate-menu.pdf) ──
-  { src: "/gallery/toasted-pancakes-with-bacon.jpg", name: "Toasted Pancakes & Bacon", span: "col-span-1 row-span-2", accent: "#0099cb", category: ["brekkie"] },
-  { src: "/gallery/smashed-avocado.jpg",             name: "Smashed Avocado",          span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
-  { src: "/gallery/ulster-fry.jpg",                  name: "Ulster Fry",               span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
-  { src: "/gallery/scone-platter-and-latte.jpg",     name: "Scone Platter & Latte",    span: "col-span-1 row-span-1", accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/toasted-pancakes-with-bacon.jpg", name: "Toasted Pancakes & Bacon", width: 461,  height: 575,  accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/smashed-avocado.jpg",             name: "Smashed Avocado",          width: 1125, height: 660,  accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/ulster-fry.jpg",                  name: "Ulster Fry",               width: 1440, height: 1171, accent: "#0099cb", category: ["brekkie"] },
+  { src: "/gallery/scone-platter-and-latte.jpg",     name: "Scone Platter & Latte",    width: 1102, height: 681,  accent: "#0099cb", category: ["brekkie"] },
 
   // ── Hot Food (corporate-menu.pdf) ──
-  { src: "/gallery/grilled-beef-burger.jpg",         name: "Grilled Beef Burger",       span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
-  { src: "/gallery/chicken-curry.jpg",               name: "Chicken Curry",             span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
-  { src: "/gallery/fresh-cod.jpg",                   name: "Fresh Cod & Chips",         span: "col-span-2 row-span-1", accent: "#8BC34A", category: ["hot-food"] },
-  { src: "/gallery/lasagne.jpg",                     name: "Lasagne",                   span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food", "catering"] },
-  { src: "/gallery/southern-fried-goujons.jpg",      name: "Southern Fried Goujons",    span: "col-span-1 row-span-1", accent: "#8BC34A", category: ["hot-food", "catering"] },
-  { src: "/gallery/roast-beef.jpg",                  name: "Roast Beef Dinner",         span: "col-span-2 row-span-2", accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/grilled-beef-burger.jpg",         name: "Grilled Beef Burger",       width: 1080, height: 1351, accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/chicken-curry.jpg",               name: "Chicken Curry",             width: 1340, height: 1371, accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/fresh-cod.jpg",                   name: "Fresh Cod & Chips",         width: 950,  height: 1186, accent: "#8BC34A", category: ["hot-food"] },
+  { src: "/gallery/lasagne.jpg",                     name: "Lasagne",                   width: 1080, height: 1351, accent: "#8BC34A", category: ["hot-food", "catering"] },
+  { src: "/gallery/southern-fried-goujons.jpg",      name: "Southern Fried Goujons",    width: 1408, height: 1262, accent: "#8BC34A", category: ["hot-food", "catering"] },
+  { src: "/gallery/roast-beef.jpg",                  name: "Roast Beef Dinner",         width: 1259, height: 1290, accent: "#8BC34A", category: ["hot-food"] },
 
   // ── Desserts (restaurant-menu-1.pdf) ──
-  { src: "/gallery/cake-of-the-day.jpg",             name: "Cake of the Day",           span: "col-span-1 row-span-1", accent: "#ff8097", category: ["desserts"] },
-  { src: "/gallery/waffles-strawberries-and-cream.jpg", name: "Waffles & Strawberries", span: "col-span-2 row-span-1", accent: "#ff8097", category: ["desserts"] },
+  { src: "/gallery/cake-of-the-day.jpg",             name: "Cake of the Day",           width: 1078, height: 1348, accent: "#ff8097", category: ["desserts"] },
+  { src: "/gallery/waffles-strawberries-and-cream.jpg", name: "Waffles & Strawberries", width: 1078, height: 1349, accent: "#ff8097", category: ["desserts"] },
 
   // ── Drinks (restaurant-menu-1.pdf) ──
-  { src: "/gallery/biscoff-milkshake-and-latte.jpg", name: "Biscoff Milkshake & Latte", span: "col-span-2 row-span-2", accent: "#f4b800", category: ["drinks"] },
-  { src: "/gallery/iced-latte-and-milkshake.jpg",    name: "Iced Latte & Milkshake",    span: "col-span-1 row-span-2", accent: "#f4b800", category: ["drinks"] },
-  { src: "/gallery/hot-chocolate.jpg",               name: "Hot Chocolate",             span: "col-span-1 row-span-1", accent: "#f4b800", category: ["drinks"] },
+  { src: "/gallery/biscoff-milkshake-and-latte.jpg", name: "Biscoff Milkshake & Latte", width: 665,  height: 832,  accent: "#f4b800", category: ["drinks"] },
+  { src: "/gallery/iced-latte-and-milkshake.jpg",    name: "Iced Latte & Milkshake",    width: 798,  height: 996,  accent: "#f4b800", category: ["drinks"] },
+  { src: "/gallery/hot-chocolate.jpg",               name: "Hot Chocolate",             width: 1125, height: 1370, accent: "#f4b800", category: ["drinks"] },
 
   // ── Catering (jam-tent.pdf) ──
-  { src: "/gallery/gourmet-sandwich-platter.jpg",    name: "Gourmet Sandwich Platter",  span: "col-span-1 row-span-1", accent: "#E91E63", category: ["catering"] },
-  { src: "/gallery/chicken-and-leek-pie.jpg",        name: "Chicken & Leek Pie",        span: "col-span-1 row-span-1", accent: "#E91E63", category: ["catering"] },
+  { src: "/gallery/gourmet-sandwich-platter.jpg",    name: "Gourmet Sandwich Platter",  width: 1081, height: 1352, accent: "#E91E63", category: ["catering"] },
+  { src: "/gallery/chicken-and-leek-pie.jpg",        name: "Chicken & Leek Pie",        width: 1404, height: 1440, accent: "#E91E63", category: ["catering"] },
 ];
 
 const categories: { id: Category; label: string; color: string }[] = [
@@ -121,43 +122,34 @@ export default function Gallery() {
           ))}
         </motion.div>
 
-        {/* Gallery Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-2 md:grid-cols-4 auto-rows-[120px] md:auto-rows-[180px] gap-3 md:gap-4"
-        >
+        {/* Gallery — CSS columns masonry */}
+        <div className="columns-2 md:columns-3 gap-3 md:gap-4">
           <AnimatePresence mode="popLayout">
             {filteredImages.map((image, index) => (
               <motion.div
                 key={image.src}
                 layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                whileHover={{
-                  scale: 1.02,
-                  zIndex: 10,
-                  transition: { duration: 0.3 }
-                }}
-                className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl ${
-                  activeCategory === "all" ? image.span : "col-span-1 row-span-1"
-                }`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+                className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl mb-3 md:mb-4 break-inside-avoid"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <Image
                   src={image.src}
                   alt={image.name}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover transition-all duration-700 group-hover:scale-110"
+                  width={image.width}
+                  height={image.height}
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Gradient overlay */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500"
                   style={{
-                    background: `linear-gradient(135deg, ${image.accent}90 0%, transparent 50%, ${image.accent}60 100%)`
+                    background: `linear-gradient(to top, ${image.accent}CC 0%, transparent 50%)`
                   }}
                 />
 
@@ -169,32 +161,26 @@ export default function Gallery() {
 
                 {/* Zoom icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileHover={{ scale: 1, rotate: 0 }}
-                    className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg"
-                  >
+                  <div className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                     <ZoomIn size={24} style={{ color: image.accent }} />
-                  </motion.div>
+                  </div>
                 </div>
 
-                {/* Name badge */}
+                {/* Name badge — bottom left on hover */}
                 <div
-                  className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: image.accent }}
+                  className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
-                  {image.name}
+                  <span
+                    className="inline-block px-3 py-1.5 rounded-full text-xs font-semibold text-white"
+                    style={{ backgroundColor: image.accent }}
+                  >
+                    {image.name}
+                  </span>
                 </div>
-
-                {/* Corner accent */}
-                <div
-                  className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ borderTopColor: image.accent }}
-                />
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
 
         {/* Empty state */}
         {filteredImages.length === 0 && (
