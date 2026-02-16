@@ -123,7 +123,7 @@ export default function Gallery() {
         </motion.div>
 
         {/* Gallery — CSS columns masonry */}
-        <div className="columns-2 md:columns-3 gap-3 md:gap-4">
+        <div className="columns-2 sm:columns-3 md:columns-4 gap-2 md:gap-3">
           <AnimatePresence mode="popLayout">
             {filteredImages.map((image, index) => (
               <motion.div
@@ -133,7 +133,7 @@ export default function Gallery() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: index * 0.04 }}
-                className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl mb-3 md:mb-4 break-inside-avoid"
+                className="relative rounded-xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl mb-2 md:mb-3 break-inside-avoid"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <Image
